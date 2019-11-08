@@ -9,55 +9,38 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
 var Eliment = document.querySelector('.actions');
 
-Eliment.addEventListener('click', function(event) {
-    var operators = event.target.closest(".operators");
-    
-})
 
-
-switch(Eliment){
-    
-    case "+" :
-    console.log("result");
-        //document.getElementById("result").innerHTML = result ;
-        break;
-}
-
-/*var Eliment = document.querySelector('.actions');
 
 Eliment.addEventListener('click', function(event) {
-    var operators = event.target.closest('.operator');
-    console.log(operators.innerHTML);
-})
+   
+    var operators = event.target.closest(".operator");
+    var op1 = document.getElementById("op-one").value ;
+    var op2 = document.getElementById("op-two").value;
 
-switch(add){
+    switch(operators.innerHTML){
+            case "+" :
+            var  result = parseInt(op1)+parseInt(op2);
+            console.log(result);
+            break;
+
+            case "-" : var  result = parseInt(op1)-parseInt(op2);
+            console.log(result);
+            break;
+
+            case "×":
+            var  result = parseInt(op1)*parseInt(op2);
+            console.log(result);
+            break;
+
+            case "÷":
+            var  result = parseInt(op1)/parseInt(op2);
+            console.log(result);
+            break;
+    }
+
+});
     
-    case "+":
-    console.log(result);
-        //document.getElementById("result").innerHTML = result ;
-        break;
-}
-
-*/
-//button.onclick(test());
-//console.log(operator);
-
-/*   
-function test() {
-    if (button.getElementById("")){
-     result = parseInt(op1)+parseInt(op2);
-   console.log(result);
-       document.getElementById("result").innerHTML = result ;
-    }
-    else{
-        return false;
-    }
-    //return true;
-}
-
-(function() {
-    return true;
-})();
 */
