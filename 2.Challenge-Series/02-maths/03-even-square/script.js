@@ -34,15 +34,17 @@
 
         // your code here
         var evenNum = 0;
-        var result = 0;
-        var remainder;
-        var storeNum=[];
+       var result=0;
+       var storeNum=[];
+       storeNum.push(result);
+        
         for ( evenNum ; result < 21; evenNum++ ) {
-       
+            
                     result=(evenNum+2);
+                    storeNum.push(result);
                     //console.log(result);
                     if (result>21) break;
-                    else {storeNum.push(result);
+                    else {
                         evenNum++
                     console.log(storeNum);
                     }
