@@ -1,6 +1,6 @@
 /* becode/javascript
  *
- * /02-maths/03-even-square/script.js - 2.3: carrés des pairs
+ * /02-maths/05-factorial/script.js - 2.5: Factorielle
  *
  * coded by leny@BeCode
  * started at 26/10/2018
@@ -10,49 +10,26 @@
 // You will have time to focus on it later.
 
 (function() {
+    
+    // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-        var squareNum = 0;
-        var result = 0;
-        var storeNum=[];
-        for ( squareNum ; result < 21; squareNum++ ) {
+
+        var numIn = document.getElementById("numberIn").value;
+        //console.log(numIn);
+         numIn=Number(numIn);
+        for(var i = numIn - 1; i >= 1; i--){
+                var numIn=numIn*i;
+               
+                
+        }
        
-                    result=(squareNum*squareNum);
-                    //console.log(result);
-                    if (result>21) break;
-                    else {storeNum.push(result);
-                    console.log(storeNum);
-                    }
-        }
-        
-        document.getElementById("squareNum").innerHTML = "square numbers less than 21 are : "+storeNum ;
+        console.log(numIn);
+        document.getElementById("factorial").innerHTML=("factorial = "+numIn);
+
+
     });
-
-    document.getElementById("run1").addEventListener("click", function() {
-
-        // your code here
-        var evenNum = 0;
-       var result=0;
-       var storeNum=[];
-       storeNum.push(result);
-        
-        for ( evenNum ; result < 21; evenNum++ ) {
-            
-                    result=(evenNum+2);
-                    storeNum.push(result);
-                    //console.log(result);
-                    if (result>21) break;
-                    else {
-                        evenNum++
-                    console.log(storeNum);
-                    }
-        }
-        
-        document.getElementById("evenNum").innerHTML = "even Numbers less than 21 are:  " + storeNum ;
-    });
-
-    
 
 })();
